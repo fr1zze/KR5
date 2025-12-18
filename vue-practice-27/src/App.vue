@@ -34,6 +34,13 @@
       >
         Пример 4: Генератор палитр
       </button>
+      <!-- <button
+        @click="currentDemo = 'tasks'"
+        :class="{ active: currentDemo === 'tasks' }"
+        class="nav-button"
+      >
+        Пример 5: Задачи (Компоненты)
+      </button> -->
     </nav>
     <!-- Отображаем выбранный компонент -->
     <main class="main-content">
@@ -47,6 +54,8 @@
       <EventComputedDemo v-else-if="currentDemo === 'events'" />
 
       <ColorPaletteGenerator v-else-if="currentDemo === 'palette'" />
+
+      <!-- <TaskApp v-else-if="currentDemo === 'tasks'" /> -->
 
       <!-- Сообщение если ничего не выбрано -->
       <div v-else class="welcome-message">
@@ -65,6 +74,7 @@ import ReactiveDemo from './components/27/1/ReactiveDemo.vue'
 import ConditionalListDemo from './components/27/2/ConditionalListDemo.vue'
 import EventComputedDemo from './components/27/3/EventComputedDemo.vue'
 import ColorPaletteGenerator from './components/27/4/ColorPaletteGenerator.vue'
+// import TaskApp from './components/28/TaskApp.vue'
 
 import { ref } from 'vue'
 export default {
@@ -76,6 +86,7 @@ export default {
     ConditionalListDemo,
     EventComputedDemo,
     ColorPaletteGenerator
+    // TaskApp
   },
   setup () {
     // Текущий активный демо-компонент
